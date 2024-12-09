@@ -159,6 +159,18 @@ h1 {
 
 }
 
+.newLogo{  
+    height: 120px;
+    width: 120px;
+}
+
+@media screen and (max-width: 400px) {
+    .newLogo{  
+        height: 80px;
+        width: 80px;
+    }
+}
+
 .rotate {
     transform: rotateY(360deg);
 }
@@ -199,6 +211,7 @@ h1 {
     height: 350px;
     overflow: hidden;
     border-radius: 7%;
+    
 
 }
 
@@ -316,6 +329,8 @@ transition: 0.5s;
     border: solid 2px var(--Secondary-color) !important;
 }
 
+
+
 .section-prodotti {
     border: solid 2px var(--Secondary-color);
     background-color: var(--Primary-color)var(--Blue-decoration)
@@ -344,8 +359,6 @@ transition: 0.5s;
 .cardAccordionCustom {
     color: var(--Blue-decoration);
     background-color: var(--Secondary-color);
-    /* height: 200px; */
-    width: 30%;
     border-radius: 20px;
     border: solid 3px var(--Primary-color);
     display: flex;
@@ -400,6 +413,13 @@ transition: 0.5s;
 
 /*Fine  div input range dell'accordion */
 
+#inputCerca {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, rgb(237, 240, 236), rgb(221, 223, 99));
+    color: var(--Blue-decoration);
+}
+
 
 
 /* Fine menu dell'accordion */
@@ -453,6 +473,54 @@ transition: 0.5s;
 
 /* fine media queery per navbar */
 
+
+/* media query per nav fixed-bottom pagina prodotti */
+@media screen and (max-width: 768px) {
+
+    .navbar-esclusiva .navbar-collapse {
+        bottom: 100%;
+        top: auto;
+        
+    }
+  
+    .navbar-esclusiva .navbar-collapse {
+        bottom: 100%;
+        top: auto;
+    }
+
+    .navbar-esclusiva .collapse.show {
+        display: block;
+        position: absolute;
+        width: 100%;
+        bottom: 100%;
+        background-color: var(--Secondary-color);
+        left: 0; 
+        margin: 0; 
+        padding: 0; 
+       
+    }
+    
+
+    .navbar-esclusiva .navbar-nav {
+        width: 100%;
+        padding: 0; 
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+    .navbar-esclusiva .nav-item {
+        width: 100%;
+        text-align: center; 
+        margin-top: 15px;
+    }
+
+} .navbar-esclusiva .nav-link { 
+    display: block;
+     width: 100%;
+      text-align: start; 
+}
+/* fine media query per nav fixed-bottom pagina prodotti */
 
 
 /* media queery per Header */

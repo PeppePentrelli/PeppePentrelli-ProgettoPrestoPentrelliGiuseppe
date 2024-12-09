@@ -7,6 +7,8 @@ let logoQuery = document.querySelector('.logoQuery')
 let titoloNav = document.querySelector('.titoloNav')
 let dollar = document.getElementById('dollar');
 let collapseCustom = document.querySelector('.collapseCustom')
+let inputCerca = document.querySelector('#inputCerca')
+
 // ELEMENTI CATTURATI
 
 
@@ -24,9 +26,8 @@ window.addEventListener('scroll', () => {
     collapse.classList.remove('bg-4')
     collapse.classList.add('bg-2');
     navbar.style.height = '170px'
-    navbar.style.border = 'solid 2px rgb(37, 55, 69)'
+    navbar.style.border = 'solid 20px rgb(37, 55, 69)'
 
-    
     links.forEach((link) => {
       link.style.color = 'var(--Blue-decoration)';
       link.classList.add('focus-on-scroll');
@@ -42,8 +43,7 @@ window.addEventListener('scroll', () => {
       logoQuery.src = "http://127.0.0.1:5500/Media/hamburger-b.png";
 
 
-      logo.style.height = '150px'
-      logo.style.width = '150px'
+    logo.classList.add('newLogo')
       logoQuery.style.height = '50px'
       logoQuery.style.width = '50px'
       logo.classList.add('rotate');
@@ -72,8 +72,8 @@ window.addEventListener('scroll', () => {
 
     navbarLogo.forEach(logo => {
       logo.src = "http://127.0.0.1:5500/Media/logo-g.png";
-      logo.style.height = ' 70px';
-      logo.style.width = '40px';
+      logo.classList.remove('newLogo');
+    
       logoQuery.style.height = '50px';
       logoQuery.style.width = '50px';
       logo.classList.remove('rotate');
@@ -88,7 +88,6 @@ window.addEventListener('scroll', () => {
 
 })
 // LOGICHE PER NAVBAR
-
 
 
 // CURSORE PERSONALIZZATO
@@ -184,15 +183,17 @@ data.sort((a,b) => a.price - b.price) ;
     array.forEach((annuncio, i) => {
 
       let div = document.createElement('div');
-      div.classList.add('cardAccordionCustom', 'col-12','col-md-6');
+      div.classList.add('col-12','col-md-4');
       
 
       
       div.innerHTML = `
+<div class="cardAccordionCustom">
                     <p class="h2" title = "${annuncio.name}">${troncateWord(annuncio.name)}</p>
                     <img src="https://picsum.photos/${250 + i}" alt="">
                 <p class="h3" title = "${annuncio.category}">${annuncio.category}</p>
                 <p class="h4" title = "${annuncio.price}">${annuncio.price} $</p>
+                </div>
     `;
       cardAccordionCustomWrapper.appendChild(div)
     })
@@ -284,6 +285,24 @@ priceValue.innerHTML = myRange.value;
     filterForPrice()
 
   })
+
+// logica filtro per parola
+
+function filtraPerParola (parola) {
+
+  let filtered = data.filter((annuncio) => annuncio.name.toLowerCase().includes(parola.toLowerCase())) ;
+
+  showCard(filtered)
+
+}
+
+
+inputCerca.addEventListener('input' , () => { 
+
+  filtraPerParola(inputCerca.value)
+})
+//fine logica filtro per parola
+
 
 });
 // Fine chiamata asincrona fetch

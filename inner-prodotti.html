@@ -27,7 +27,7 @@
 
 
     <!-- Inizio Navbar -->
-    <nav class="navbar navbar-expand-md navCustom fixed-bottom bg-4 navPaginaProdotti">
+    <nav class="navbar navbar-expand-md navCustom fixed-bottom bg-4 navPaginaProdotti navbar-esclusiva text-center ">
         <div id="collapse" class="container-fluid  ">
             <a class="navbar-brand" href="#">
                 <img class="img-fluid navbarLogo" src="Media/logo-g.png" alt="">
@@ -39,7 +39,7 @@
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
             </button>
-            <div class="container-fluid bg-3 collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="container-fluid bg-3 collapse navbar-collapse  " id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item ">
                         <a class="nav-link sacramento-regular ms-5  aria-current=" page href="inner.html"><i
@@ -84,7 +84,7 @@
                 <h1>Offerte del giorno</h1>
                 <!-- colonna filtri -->
 
-                <div class="col-12 col-md 3 menuFiltraggio">
+                <div class="col-12 col-md-3 menuFiltraggio">
                     <div class="accordion accordionCustom sticky-top " id="accordionExample">
                         <div class="accordion-item accordion-itemCustom">
                             <button class="accordion-button accordion-buttonCustom" type="button"
@@ -136,19 +136,14 @@
                                 <button class="accordion-button collapsed accordion-buttonCustom" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
                                     aria-controls="collapseThree">
-                                    Parola
+                                    Cerca
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="Categorie"
-                                            id="flexRadioDefault2">
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            Default checked radio
-                                        </label>
-                                    </div>
+            <input id="inputCerca" type="text" placeholder="inserisci il testo">
+            <label for="inputCerca">le banane</label>
                                 </div>
                             </div>
                         </div>
@@ -290,7 +285,7 @@
 
         </div>
     </footer>
-
+<div style="height: 200px;"></div>
     <!-- footer -->
 
 

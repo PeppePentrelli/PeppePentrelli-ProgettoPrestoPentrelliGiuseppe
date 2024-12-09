@@ -9,7 +9,7 @@ let dollar = document.getElementById('dollar');
 let primoNumero = document.querySelector('#primoNumero')
 let secondoNumero = document.querySelector('#secondoNumero')
 let terzoNumero = document.querySelector('#terzoNumero')
-
+let body = document.querySelector('body')
 // ELEMENTI CATTURATI
 
 // CURSORE PERSONALIZZATO
@@ -28,6 +28,8 @@ document.addEventListener('click', () => {
 
 
 // CURSORE PERSONALIZZATO
+
+
 
 
 // LOGICHE PER NAVBAR
@@ -60,8 +62,7 @@ window.addEventListener('scroll', () => {
       logoQuery.src = "http://127.0.0.1:5500/Media/hamburger-b.png";
 
 
-      logo.style.height = '180px'
-      logo.style.width = '180px'
+    logo.classList.add('newLogo')
       logoQuery.style.height = '50px'
       logoQuery.style.width = '50px'
       logo.classList.add('rotate');
@@ -90,8 +91,8 @@ window.addEventListener('scroll', () => {
 
     navbarLogo.forEach(logo => {
       logo.src = "http://127.0.0.1:5500/Media/logo-g.png";
-      logo.style.height = ' 70px';
-      logo.style.width = '40px';
+      logo.classList.remove('newLogo');
+    
       logoQuery.style.height = '50px';
       logoQuery.style.width = '50px';
       logo.classList.remove('rotate');
