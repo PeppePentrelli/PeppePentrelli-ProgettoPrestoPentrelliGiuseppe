@@ -1,0 +1,494 @@
+/* variabili */
+:root {
+    --Primary-color: rgb(237, 240, 236);
+    --Secondary-color: rgb(221, 223, 99);
+    --Blue-decoration: rgb(37, 55, 69);
+}
+
+/* variabili */
+
+
+
+/* font */
+.lilita {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px
+}
+
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.sacramento-regular {
+    font-family: "Sacramento", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    transition: 0.5s;
+
+
+}
+
+/* font */
+
+
+
+/* classi Custom */
+.bg-1 {
+    background-color: var(--Primary-color);
+}
+
+.bg-2 {
+    background-color: var(--Secondary-color);
+}
+
+.bg-4 {
+    background-color: var(--Blue-decoration);
+}
+
+.color-1 {
+    color: var(--Primary-color);
+}
+
+.color-2 {
+    color: var(--Secondary-color) !important;
+}
+
+.color-4 {
+    color: var(--Blue-decoration) !important;
+}
+
+
+/* classi Custom */
+
+
+
+/* body */
+body {
+    background-color: var(--Blue-decoration);
+    cursor: none;
+
+}
+
+/* body */
+
+
+
+/* cursore personalizzato $ */
+.dollar {
+    width: 20px;
+    height: 20px;
+    color: var(--Primary-color);
+    /* border-radius: 50%; */
+    position: fixed;
+    transform: translate(-50%, -150%);
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+    pointer-events: none;
+    z-index: 1000;
+    font-size: 50px;
+}
+
+.dollar.hovered {
+    width: 30px;
+    height: 30px;
+    color: var(--Secondary-color);
+}
+
+/* cursore personalizzato $ */
+
+
+
+/* Inizio Nav */
+.navCustom {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+
+}
+
+.titoloNav,
+h1 {
+    color: var(--Secondary-color);
+}
+
+.nav-link {
+
+    color: var(--Secondary-color);
+
+}
+
+.nav-link:hover {
+
+    color: var(--Primary-color) !important;
+    text-shadow: 2px 2px 6px var(--Secondary-color), -2px -2px 6px var(--Secondary-color);
+    font-size: 50px;
+}
+
+.nav-link:focus {
+
+    color: var(--Primary-color);
+
+}
+
+.focus-on-scroll {
+    color: var(--Blue-decoration);
+    font-size: 40px;
+
+
+}
+
+.focus-on-scroll:hover {
+    font-size: 50px;
+    color: whitesmoke !important;
+    text-shadow: 4px 4px 12px var(--Blue-decoration), -4px -4px 12px var(--Blue-decoration);
+    font-size: 70px;
+
+}
+
+.navbarLogo {
+    height: 70px;
+    width: 40px;
+    transition: transform 1s;
+    display: block;
+
+}
+
+.rotate {
+    transform: rotateY(360deg);
+}
+
+.logoQuery {
+    height: 70px;
+    width: 70px;
+    display: none;
+}
+
+/* Fine Nav */
+
+
+
+/* header */
+.carousel-item {
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+    border: solid 1px var(--Secondary-color);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/*fine header */
+
+
+
+/* inizio section */
+.cardCustom {
+    border: solid 2px var(--Blue-decoration);
+    transition: 0.5s;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 7%;
+
+}
+
+.row-card {
+    background-color: transparent;
+}
+
+.cardCustom:hover {
+    scale: 1.2;
+    color: white !important;
+    text-shadow: 4px 4px 12px var(--Blue-decoration), -4px -4px 12px var(--Blue-decoration);
+
+
+}
+
+.positioned {
+    position: relative;
+    top: -300px;
+    z-index: 1;
+}
+
+/* fine section */
+
+
+
+/* inizio section 2*/
+
+.numeri {
+    font-size: 100px;
+    color: var(--Primary-color);
+}
+
+h2 {
+    color: var(--Secondary-color);
+}
+
+.p-section2 {
+    color: var(--Secondary-color);
+    font-size: 20px;
+}
+
+.img-section2 {
+    border-radius: 10px;
+}
+
+.plusSpan {
+
+    font-size: 120px;
+}
+
+/* fine section 2*/
+
+/* inizio section3 */
+.img-section3{
+    border-radius: 20px;
+}
+
+.p-section3{ 
+    color: var(--Secondary-color);
+    font-size: 20px;
+}
+
+
+/* fine section3 */
+
+/* section4  */
+.h4-section4{
+
+    color: var(--Secondary-color);
+    
+
+ }
+
+.img-section4{
+    border-radius: 10px;
+border: solid 10px var(--Secondary-color);
+box-shadow: 2px 2px 6px var(--Secondary-color), -6px -6px 12px var(--Primary-color);
+transition: 0.5s;
+
+
+}
+
+.img-section4:hover{
+
+    scale: 1.5;
+
+
+}
+
+.h2-section-4 {
+transition: 0.5s;
+
+}
+
+.h2-section-4:hover {
+    text-shadow: 2px 2px 6px var(--Secondary-color);
+    scale: 2;
+    
+    }
+
+/* footer */
+.footer {
+    border-top: solid 1px var(--Secondary-color);
+    color: var(--Secondary-color);
+}
+
+/* footer */
+
+
+
+
+/* PAGINA PRODOTTI */
+
+.navPaginaProdotti{ 
+    border: solid 2px var(--Secondary-color) !important;
+}
+
+.section-prodotti {
+    border: solid 2px var(--Secondary-color);
+    background-color: var(--Primary-color)var(--Blue-decoration)
+}
+
+/* menu dell'accordion */
+
+.accordion-buttonCustom {
+    background-color: var(--Secondary-color);
+    color: var(--Blue-decoration);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+}
+
+.accordion-button:not(.collapsed) {
+
+    background-color: var(--Secondary-color);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+
+    box-shadow: none;
+}
+
+.cardAccordionCustom {
+    color: var(--Blue-decoration);
+    background-color: var(--Secondary-color);
+    /* height: 200px; */
+    width: 30%;
+    border-radius: 20px;
+    border: solid 3px var(--Primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    overflow: hidden;
+
+
+}
+
+.cardAccordionCustom:hover {
+
+    background-color: var(--Blue-decoration);
+    color: var(--Secondary-color);
+    scale: 1.3;
+    border: solid 2px var(--Secondary-color);
+
+}
+
+.accordion-itemCustom {
+
+    background-color: var(--Blue-decoration);
+    color: var(--Secondary-color);
+
+}
+
+/* div input range dell'accordion */
+
+
+#myRange {
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, rgb(237, 240, 236), rgb(221, 223, 99));
+    outline: none;
+    opacity: 0.9;
+    transition: opacity 0.2s
+}
+
+#myRange::-webkit-slider-thumb {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background:  rgb(37, 55, 69);
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid 2px var(--Secondary-color);
+}
+
+/*Fine  div input range dell'accordion */
+
+
+
+/* Fine menu dell'accordion */
+
+
+/* FINE PAGINA PRODOTTI */
+
+
+/*inizio media queery */
+
+/*inizio media queery per navbar */
+@media screen and (max-width : 900px) {
+
+    .cheat {
+        display: none;
+    }
+
+
+    .logoQuery {
+
+        display: block;
+
+    }
+
+    .titoloNav {
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    
+}
+
+@media screen and (min-width : 900px) {
+
+    .logoQuery {
+
+        display: none;
+    }
+
+    .navbarLogo {
+
+        display: block;
+
+    }
+
+}
+
+/* fine media queery per navbar */
+
+
+
+/* media queery per Header */
+@media screen and (max-width : 900px) {
+
+    .carousel-item {
+        width: 100%;
+        height: 500px;
+
+        overflow: hidden;
+        border: solid 1px var(--Secondary-color);
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+
+}
+
+/* Fine media queery per Header */
+
+
+
+/* media queery per Section1 */
+@media screen and (max-width : 900px) {
+
+    .positioned {
+        position: static;
+
+    }
+
+}
+
+/* Fine media queery per Section1 */
+
+/* fine media queery */
