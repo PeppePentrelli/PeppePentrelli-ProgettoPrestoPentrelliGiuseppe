@@ -208,17 +208,24 @@ data.sort((a,b) => a.price - b.price) ;
 
 
   // funzione che filtra per categorie
+  let radioButtons = document.querySelectorAll('.form-check-input');
 
-  function filterByCategory(cat) {
+  function filterByCategory(array) {
 
-    if (cat != 'all') {
+let categoria = Array.from(radioButtons).find((button) =>  button.checked).id
+console.log(categoria);
 
-      let filtered = data.filter((annuncio) => annuncio.category == cat);
+
+    if (categoria != 'all') {
+
+      let filtered = array.filter((annuncio) => annuncio.category == categoria);
       console.log(filtered);
-      showCard(filtered)
+      
+      return filtered
 
     } else {
-      showCard(data)
+      return array
+      
     }
 
   }
@@ -229,13 +236,14 @@ data.sort((a,b) => a.price - b.price) ;
 
 
   // forEach che filtrea per categorie al click dei radio button
-  let radioButtons = document.querySelectorAll('.form-check-input');
+
 
   radioButtons.forEach((button) => {
 
     button.addEventListener('click', () => {
+      filterForRage()
 
-      filterByCategory(button.id)
+      globalFilter()
 
 
 
@@ -252,7 +260,7 @@ let priceValue = document.querySelector('#priceValue')
 
 function filterForRage () {
 
-let price = data.map(  (annuncio) => +annuncio.price );
+let price = filterByCategory(data).map(  (annuncio) => +annuncio.price );
 
 price.sort((a,b) => a - b);
 
@@ -269,11 +277,11 @@ filterForRage()
 
 // Fine logiche per filtro range
 
-function filterForPrice () {
+function filterForPrice (array) {
 
-  let filter = data.filter((annuncio) => +annuncio.price <= myRange.value);
+  let filter = array.filter((annuncio) => +annuncio.price <= myRange.value);
   
-  showCard(filter)
+  return filter;
   
   
   }
@@ -282,26 +290,41 @@ function filterForPrice () {
 
 priceValue.innerHTML = myRange.value;
 
-    filterForPrice()
+globalFilter()
+
 
   })
 
 // logica filtro per parola
 
-function filtraPerParola (parola) {
+function filtraPerParola (array) {
 
-  let filtered = data.filter((annuncio) => annuncio.name.toLowerCase().includes(parola.toLowerCase())) ;
+  let filtered = array.filter((annuncio) => annuncio.name.toLowerCase().includes(inputCerca.value.toLowerCase())) ;
 
-  showCard(filtered)
+return filtered
 
 }
 
 
 inputCerca.addEventListener('input' , () => { 
 
-  filtraPerParola(inputCerca.value)
+  globalFilter()
 })
 //fine logica filtro per parola
+
+
+// filtro generale
+
+function globalFilter() {
+
+  let categoryFiltered = filterByCategory(data);
+  let priceFiltered = filterForPrice(categoryFiltered);
+  let filteredByWord = filtraPerParola(priceFiltered);
+  
+  showCard(filteredByWord);
+}
+
+// filtro generale
 
 
 });

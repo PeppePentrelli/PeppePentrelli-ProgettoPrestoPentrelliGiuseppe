@@ -452,6 +452,13 @@ transition: 0.5s;
         align-items: center;
     }
 
+    .positioned .row-card{
+        position: relative;
+        top: -100px;
+        z-index: 1;
+    }
+    
+
 
     
 }
@@ -560,3 +567,5 @@ transition: 0.5s;
 /* Fine media queery per Section1 */
 
 /* fine media queery */
+
+
