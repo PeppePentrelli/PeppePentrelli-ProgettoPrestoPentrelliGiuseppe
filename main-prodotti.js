@@ -12,7 +12,6 @@ let inputCerca = document.querySelector('#inputCerca')
 // ELEMENTI CATTURATI
 
 
-
 // LOGICHE PER NAVBAR
 window.addEventListener('scroll', () => {
 
@@ -193,6 +192,7 @@ data.sort((a,b) => a.price - b.price) ;
                     <img src="https://picsum.photos/${250 + i}" alt="">
                 <p class="h3" title = "${annuncio.category}">${annuncio.category}</p>
                 <p class="h4" title = "${annuncio.price}">${annuncio.price} $</p>
+                <button id="buttonBuy">Aggiungi al carrello</button>
                 </div>
     `;
       cardAccordionCustomWrapper.appendChild(div)
@@ -327,7 +327,35 @@ function globalFilter() {
 // filtro generale
 
 
+// logica prova carrello
+
+let buttonBuy = document.querySelectorAll('#buttonBuy')
+let prova = document.querySelector('.prova')
+let cartSection = document.querySelector('.cartSection')
+// Assicurati che questi elementi siano definiti correttamente
+
+
+let accumulatore = 0
+
+buttonBuy.forEach( button => { 
+
+  button.addEventListener('click' , ( ) => { 
+    
+     accumulatore++;
+      prova.innerHTML = accumulatore
+      let prova2 = 'il bottone e stato cliccato'
+      console.log(prova2);
+      let div = document.createElement('div');
+
+
+             
+
+  })
+  
+})
+// logica prova carrello
+
+
 });
 // Fine chiamata asincrona fetch
-
 
