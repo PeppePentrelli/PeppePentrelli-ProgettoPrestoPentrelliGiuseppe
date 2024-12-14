@@ -229,9 +229,10 @@ h1 {
 
 .positioned {
     position: relative;
-    top: -600px;
+    top: -200px;
     z-index: 1;
     height: 10px;
+    margin-bottom: 300px;
 }
 
 /* fine section */
@@ -297,7 +298,7 @@ transition: 0.5s;
 
 .img-section4:hover{
 
-    scale: 1.5;
+    scale: 1.1;
 
 
 }
@@ -416,9 +417,24 @@ a.button-4-box:hover i {
     transition: 0.5s;
 }
 
+.testaIndexProdotti{ 
+    background-color: var(--Primary-color);
+}
+
 .section-prodotti {
     border: solid 2px var(--Secondary-color);
     background-color: var(--Primary-color)var(--Blue-decoration)
+}
+
+.h1-Prodotti{ 
+    color: var(--Blue-decoration);
+    border: solid 2px var(--Blue-decoration);
+}
+
+
+.imgProva { 
+ height: 100%;
+ width: 100%;
 }
 
 /* menu dell'accordion */
@@ -492,8 +508,8 @@ border: solid 2px var(--Primary-color);
 
 .cartCase{ 
     background-color: var(--Secondary-color);
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     position: fixed;
     margin-top: 30px;
@@ -502,6 +518,7 @@ border: solid 2px var(--Primary-color);
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    border: solid 2px var(--Blue-decoration);
 
 }
 
@@ -560,19 +577,25 @@ transform: scale(1.5);
 
 
 
+
+
 /* INIZIO pagina chi siamo */
 
-.presentazione{ color: var(--Secondary-color);
+.presentazione{ 
+    color: var(--Secondary-color);
 border: solid 2px var(--Secondary-color);
 font-size: 30px;
 }
 
 
 .mainCustom{ 
-    height: 200px;
+    height: max-content;
+    border: solid 2px var(--Secondary-color);
 }
 
-.vh-75 { height: 75px;}
+.vh-75 {
+     height: 750px;
+    }
 
 
 .circle { 
@@ -585,6 +608,7 @@ font-size: 30px;
     justify-content: center;
     color:  var(--Secondary-color);
     position: relative;
+    margin-top: 100px;
 
 }
 
@@ -599,6 +623,8 @@ font-size: 30px;
     position: absolute;
 z-index: 3;
 cursor: pointer;
+transition: 0.5;
+background-color: var(--Primary-color);
 }
 
 .moved{ 
@@ -608,10 +634,80 @@ cursor: pointer;
     border: solid 2px var(--Secondary-color);
     background-color:var(--Primary-color);
     position: absolute;
+    transition: 0.5s;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
 
 }
 
+
+.staffCard{
+
+    height: 500px;
+    width: 300px;
+margin-top: 100px;
+    
+
+}
+
+
+.staffCard:hover > .inner{
+
+    transform: rotateY(180deg);
+
+ 
+    transform: rotateY(180deg);
+
+}
+
+.inner { 
+    border-radius:20px ;
+    height: 100%;
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+border: solid 2px var(--Secondary-color);
+
+
+
+
+}
+
+.face { 
+
+    height: 500px;
+    width: 300px;
+    background-color: var(--Primary-color);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+backface-visibility: hidden;
+border-radius:20px ;
+
+
+}
+
+
+.back { 
+
+    height: 500px;
+    width: 300px;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 15px;
+    color: var(--Secondary-color);
+
+}
 /* FINE pagina chi siamo */
+
+
+
 
 
 /*inizio media queery */
@@ -639,13 +735,94 @@ cursor: pointer;
     }
 
     .positioned{ 
-    height: 1200px;
-
+  
+        position: relative;
+        margin-top: 10000px;
+        z-index: 1;
+        height: 10px;
+        margin-bottom: 1200px;
     }
 
+    .row-card{ 
+        margin-top: 400px;
+    }
 
+    .responsiveDiv{ 
+        height: 200px;
+    }
+
+    .p-section2 {
+        color: var(--Secondary-color);
+        font-size: 15px;
+    }
+
+    .plusSpan {
+
+        font-size: 50px;
+    }
+
+    .numeri {
+        font-size: 40px;
+        color: var(--Primary-color);
+    }
+    
+
+    .img-section4:hover{
+
+        scale: 1;
+    
+    
+    }
+    
+    .h2-section-4:hover {
+        scale: 1;
+        
+        }
+
+        .cartCase{ 
+          margin: 15px; 
+          height: 80px;
+          width: 80px;
+        }
+        
+    /* media queery Pagina Prodtti */
+
+#cardAccordionCustomWrapper { 
+
+    overflow-x: scroll;
+    flex-direction: row;
     
 }
+
+
+
+.cardAccordionCustom:hover {
+
+    background-color: var(--Blue-decoration);
+    color: var(--Secondary-color);
+    scale: 1;
+    border: solid 2px var(--Secondary-color);
+
+}
+
+/* fine media queery Pagina Prodtti */
+
+.footerCustomChiSiamo{
+
+
+
+    margin-top: 400px;
+
+}
+
+/*Inizio media queery pagina chi siamo */
+
+
+/*Fine media queery pagina chi siamo */
+}
+
+
+
 
 @media screen and (min-width : 900px) {
 

@@ -332,6 +332,8 @@ function globalFilter() {
 let buttonBuy = document.querySelectorAll('#buttonBuy')
 let prova = document.querySelector('.prova')
 let cartSection = document.querySelector('.cartSection')
+let cartCase = document.querySelector('.cartCase')
+
 // Assicurati che questi elementi siano definiti correttamente
 
 
@@ -347,13 +349,25 @@ buttonBuy.forEach( button => {
       console.log(prova2);
       let div = document.createElement('div');
 
+cartCase.style = 'transform: scale(1.5)'
 
-             
+setTimeout(() => { cartCase.style.transform = 'scale(1)'; 
 
-  })
+}, 300);
+
+setTimeout(() => { cartCase.style.transform = 'scale(1.5)'; 
+
+}, 600);
+
+setTimeout(() => { cartCase.style.transform = 'scale(1)'; 
+
+}, 900);
+
+});
   
 })
 // logica prova carrello
+
 
 
 });

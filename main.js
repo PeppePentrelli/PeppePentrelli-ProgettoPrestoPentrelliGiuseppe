@@ -119,7 +119,6 @@ window.addEventListener('scroll', () => {
 
 
 // LOGICHE PER SECTION 2
-
 function creaIntervallo(n, e, i) {
 
 
