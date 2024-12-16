@@ -1,13 +1,13 @@
 // ELEMENTI CATTURATI
-let navbar = document.querySelector('.navbar')
-let links = document.querySelectorAll('.nav-link')
-let collapse = document.querySelector('#collapse')
-let navbarLogo = document.querySelectorAll('.navbarLogo')
-let logoQuery = document.querySelector('.logoQuery')
-let titoloNav = document.querySelector('.titoloNav')
+let navbar = document.querySelector('.navbar');
+let links = document.querySelectorAll('.nav-link');
+let collapse = document.querySelector('#collapse');
+let navbarLogo = document.querySelectorAll('.navbarLogo');
+let logoQuery = document.querySelector('.logoQuery');
+let titoloNav = document.querySelector('.titoloNav');
 let dollar = document.getElementById('dollar');
-let collapseCustom = document.querySelector('.collapseCustom')
-let inputCerca = document.querySelector('#inputCerca')
+let collapseCustom = document.querySelector('.collapseCustom');
+let inputCerca = document.querySelector('#inputCerca');
 
 // ELEMENTI CATTURATI
 
@@ -19,13 +19,13 @@ window.addEventListener('scroll', () => {
 
   if (scrolled > 0) {
 
-    navbar.classList.remove('bg-4')
+    navbar.classList.remove('bg-4');
     navbar.classList.add('bg-2');
     titoloNav.classList.add('color-4');
     collapse.classList.remove('bg-4')
     collapse.classList.add('bg-2');
-    navbar.style.height = '170px'
-    navbar.style.border = 'solid 20px rgb(37, 55, 69)'
+    navbar.style.height = '170px';
+    navbar.style.border = 'solid 20px rgb(37, 55, 69)';
 
     links.forEach((link) => {
       link.style.color = 'var(--Blue-decoration)';
@@ -42,9 +42,9 @@ window.addEventListener('scroll', () => {
       logoQuery.src = "http://127.0.0.1:5500/Media/hamburger-b.png";
 
 
-    logo.classList.add('newLogo')
-      logoQuery.style.height = '50px'
-      logoQuery.style.width = '50px'
+      logo.classList.add('newLogo');
+      logoQuery.style.height = '50px';
+      logoQuery.style.width = '50px';
       logo.classList.add('rotate');
       logoQuery.classList.add('rotate');
 
@@ -52,17 +52,17 @@ window.addEventListener('scroll', () => {
 
   } else {
 
-    navbar.classList.remove('bg-2')
-    navbar.classList.add('bg-4')
-    collapse.classList.remove('bg-2')
-    collapse.classList.add('bg-4')
-    navbar.style.height = '100px'
+    navbar.classList.remove('bg-2');
+    navbar.classList.add('bg-4');
+    collapse.classList.remove('bg-2');
+    collapse.classList.add('bg-4');
+    navbar.style.height = '100px';
     titoloNav.classList.remove('color-4');
-    titoloNav.classList.add('color-2')
+    titoloNav.classList.add('color-2');
 
 
     links.forEach((link) => {
-      link.style.color = 'var(--Secondary-color)'
+      link.style.color = 'var(--Secondary-color)';
       link.classList.remove('focus-on-scroll');
       link.classList.add('nav-link-focus');
 
@@ -72,7 +72,7 @@ window.addEventListener('scroll', () => {
     navbarLogo.forEach(logo => {
       logo.src = "http://127.0.0.1:5500/Media/logo-g.png";
       logo.classList.remove('newLogo');
-    
+
       logoQuery.style.height = '50px';
       logoQuery.style.width = '50px';
       logo.classList.remove('rotate');
@@ -83,9 +83,9 @@ window.addEventListener('scroll', () => {
     });
 
 
-  }
+  };
 
-})
+});
 // LOGICHE PER NAVBAR
 
 
@@ -110,10 +110,10 @@ document.addEventListener('click', () => {
 
 fetch('./prodotti.json').then((response) => response.json()).then((data) => {
 
-data.sort((a,b) => a.price - b.price) ;
+  data.sort((a, b) => a.price - b.price);
 
   let radioWrapper = document.querySelector('#radioWrapper');
-  let cardAccordionCustomWrapper = document.querySelector('#cardAccordionCustomWrapper')
+  let cardAccordionCustomWrapper = document.querySelector('#cardAccordionCustomWrapper');
 
 
   // funzione per i radio button
@@ -128,10 +128,10 @@ data.sort((a,b) => a.price - b.price) ;
     categorie.forEach(category => {
 
       if (!categoria.includes(category)) {
-        categoria.push(category)
+        categoria.push(category);
 
 
-      }
+      };
 
 
     });
@@ -147,7 +147,7 @@ data.sort((a,b) => a.price - b.price) ;
       </label>
       `
 
-      radioWrapper.appendChild(div)
+      radioWrapper.appendChild(div);
 
     })
 
@@ -182,10 +182,10 @@ data.sort((a,b) => a.price - b.price) ;
     array.forEach((annuncio, i) => {
 
       let div = document.createElement('div');
-      div.classList.add('col-12','col-md-4');
-      
+      div.classList.add('col-4', 'mx-5', 'col-md-4');
 
-      
+
+
       div.innerHTML = `
 <div class="cardAccordionCustom">
                     <p class="h2" title = "${annuncio.name}">${troncateWord(annuncio.name)}</p>
@@ -195,14 +195,14 @@ data.sort((a,b) => a.price - b.price) ;
                 <button id="buttonBuy">Aggiungi al carrello</button>
                 </div>
     `;
-      cardAccordionCustomWrapper.appendChild(div)
+      cardAccordionCustomWrapper.appendChild(div);
     })
 
   }
   //Fine funzione che crea una card per ogni oggetto del'json
 
 
-  showCard(data)
+  showCard(data);
 
 
 
@@ -212,20 +212,20 @@ data.sort((a,b) => a.price - b.price) ;
 
   function filterByCategory(array) {
 
-let categoria = Array.from(radioButtons).find((button) =>  button.checked).id
-console.log(categoria);
+    let categoria = Array.from(radioButtons).find((button) => button.checked).id
+    console.log(categoria);
 
 
     if (categoria != 'all') {
 
       let filtered = array.filter((annuncio) => annuncio.category == categoria);
       console.log(filtered);
-      
-      return filtered
+
+      return filtered;
 
     } else {
-      return array
-      
+      return array;
+
     }
 
   }
@@ -241,132 +241,135 @@ console.log(categoria);
   radioButtons.forEach((button) => {
 
     button.addEventListener('click', () => {
-      filterForRage()
+      filterForRage();
 
-      globalFilter()
+      globalFilter();
 
 
 
-    })
-  })
+    });
+  });
   // forEach che filtrea per categorie al click dei radio button
 
 
-// inizio logiche per filtro range
+  // inizio logiche per filtro range
 
-let myRange = document.querySelector('#myRange')
-let priceValue = document.querySelector('#priceValue')
-
-
-function filterForRage () {
-
-let price = filterByCategory(data).map(  (annuncio) => +annuncio.price );
-
-price.sort((a,b) => a - b);
-
-let maxPrice = Math.ceil(price.pop())
-console.log(maxPrice);
-myRange.max = maxPrice
-myRange.value = maxPrice
-priceValue.innerHTML = maxPrice;
+  let myRange = document.querySelector('#myRange');
+  let priceValue = document.querySelector('#priceValue');
 
 
-}
+  function filterForRage() {
 
-filterForRage()
+    let price = filterByCategory(data).map((annuncio) => +annuncio.price);
 
-// Fine logiche per filtro range
+    price.sort((a, b) => a - b);
 
-function filterForPrice (array) {
+    let maxPrice = Math.ceil(price.pop())
+    console.log(maxPrice);
+    myRange.max = maxPrice;
+    myRange.value = maxPrice;
+    priceValue.innerHTML = maxPrice;
 
-  let filter = array.filter((annuncio) => +annuncio.price <= myRange.value);
-  
-  return filter;
-  
-  
+
+  };
+
+  filterForRage();
+
+  // Fine logiche per filtro range
+
+  function filterForPrice(array) {
+
+    let filter = array.filter((annuncio) => +annuncio.price <= myRange.value);
+
+    return filter;
+
+
   }
-  
-  myRange.addEventListener('input' , ( ) => { 
 
-priceValue.innerHTML = myRange.value;
+  myRange.addEventListener('input', () => {
 
-globalFilter()
+    priceValue.innerHTML = myRange.value;
+
+    globalFilter();
 
 
   })
 
-// logica filtro per parola
+  // logica filtro per parola
 
-function filtraPerParola (array) {
+  function filtraPerParola(array) {
 
-  let filtered = array.filter((annuncio) => annuncio.name.toLowerCase().includes(inputCerca.value.toLowerCase())) ;
+    let filtered = array.filter((annuncio) => annuncio.name.toLowerCase().includes(inputCerca.value.toLowerCase()));
 
-return filtered
+    return filtered;
 
-}
-
-
-inputCerca.addEventListener('input' , () => { 
-
-  globalFilter()
-})
-//fine logica filtro per parola
+  }
 
 
-// filtro generale
+  inputCerca.addEventListener('input', () => {
 
-function globalFilter() {
-
-  let categoryFiltered = filterByCategory(data);
-  let priceFiltered = filterForPrice(categoryFiltered);
-  let filteredByWord = filtraPerParola(priceFiltered);
-  
-  showCard(filteredByWord);
-}
-
-// filtro generale
+    globalFilter();
+  })
+  //fine logica filtro per parola
 
 
-// logica prova carrello
+  // filtro generale
 
-let buttonBuy = document.querySelectorAll('#buttonBuy')
-let prova = document.querySelector('.prova')
-let cartSection = document.querySelector('.cartSection')
-let cartCase = document.querySelector('.cartCase')
+  function globalFilter() {
 
-// Assicurati che questi elementi siano definiti correttamente
+    let categoryFiltered = filterByCategory(data);
+    let priceFiltered = filterForPrice(categoryFiltered);
+    let filteredByWord = filtraPerParola(priceFiltered);
+
+    showCard(filteredByWord);
+  }
+
+  // filtro generale
 
 
-let accumulatore = 0
+  // logica prova carrello
 
-buttonBuy.forEach( button => { 
+  let buttonBuy = document.querySelectorAll('#buttonBuy');
+  let prova = document.querySelector('.prova');
+  let cartSection = document.querySelector('.cartSection');
+  let cartCase = document.querySelector('.cartCase');
 
-  button.addEventListener('click' , ( ) => { 
-    
-     accumulatore++;
-      prova.innerHTML = accumulatore
-      let prova2 = 'il bottone e stato cliccato'
+  // Assicurati che questi elementi siano definiti correttamente
+
+
+  let accumulatore = 0;
+
+  buttonBuy.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+      accumulatore++;
+      prova.innerHTML = accumulatore;
+      let prova2 = 'il bottone e stato cliccato';
       console.log(prova2);
       let div = document.createElement('div');
 
-cartCase.style = 'transform: scale(1.5)'
+      cartCase.style = 'transform: scale(1.5)';
 
-setTimeout(() => { cartCase.style.transform = 'scale(1)'; 
+      setTimeout(() => {
+        cartCase.style.transform = 'scale(1)';
 
-}, 300);
+      }, 300);
 
-setTimeout(() => { cartCase.style.transform = 'scale(1.5)'; 
+      setTimeout(() => {
+        cartCase.style.transform = 'scale(1.5)';
 
-}, 600);
+      }, 600);
 
-setTimeout(() => { cartCase.style.transform = 'scale(1)'; 
+      setTimeout(() => {
+        cartCase.style.transform = 'scale(1)';
 
-}, 900);
+      }, 900);
 
-});
-  
-})
-// logica prova carrello
+    });
+
+  });
+  // logica prova carrello
 
 
 

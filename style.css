@@ -36,7 +36,9 @@
 
 /* font */
 
-
+h1 , h2 , h3 , h4 { 
+    font-family: 'Times New Roman', Times, serif;
+}
 
 /* classi Custom */
 .bg-1 {
@@ -72,8 +74,13 @@
 body {
     background-color: var(--Blue-decoration);
     cursor: none;
+    /* margin: 0px;
+    padding: 0px  ;
+    box-sizing: border-box ; */
 
 }
+
+
 
 /* body */
 
@@ -120,7 +127,7 @@ h1 {
 .nav-link {
 
     color: var(--Secondary-color);
-
+font-family: 'Times New Roman', Times, serif;
 }
 
 .nav-link:hover {
@@ -159,13 +166,13 @@ h1 {
 
 }
 
-.newLogo{  
+.newLogo {
     height: 120px;
     width: 120px;
 }
 
 @media screen and (max-width: 400px) {
-    .newLogo{  
+    .newLogo {
         height: 80px;
         width: 80px;
     }
@@ -211,7 +218,7 @@ h1 {
     height: 350px;
     overflow: hidden;
     border-radius: 7%;
-    
+
 
 }
 
@@ -234,6 +241,8 @@ h1 {
     height: 10px;
     margin-bottom: 300px;
 }
+
+
 
 /* fine section */
 
@@ -267,11 +276,11 @@ h2 {
 /* fine section 2*/
 
 /* inizio section3 */
-.img-section3{
+.img-section3 {
     border-radius: 20px;
 }
 
-.p-section3{ 
+.p-section3 {
     color: var(--Secondary-color);
     font-size: 20px;
 }
@@ -280,23 +289,23 @@ h2 {
 /* fine section3 */
 
 /* section4  */
-.h4-section4{
+.h4-section4 {
 
     color: var(--Secondary-color);
-    
-
- }
-
-.img-section4{
-    border-radius: 10px;
-border: solid 10px var(--Secondary-color);
-box-shadow: 2px 2px 6px var(--Secondary-color), -6px -6px 12px var(--Primary-color);
-transition: 0.5s;
 
 
 }
 
-.img-section4:hover{
+.img-section4 {
+    border-radius: 10px;
+    border: solid 10px var(--Secondary-color);
+    box-shadow: 2px 2px 6px var(--Secondary-color), -6px -6px 12px var(--Primary-color);
+    transition: 0.5s;
+
+
+}
+
+.img-section4:hover {
 
     scale: 1.1;
 
@@ -304,19 +313,19 @@ transition: 0.5s;
 }
 
 .h2-section-4 {
-transition: 0.5s;
+    transition: 0.5s;
 
 }
 
 .h2-section-4:hover {
     text-shadow: 2px 2px 6px var(--Secondary-color);
     scale: 2;
-    
-    }
+
+}
 
 
 /* section contatti social */
-.contattiCustom{ 
+.contattiCustom {
     display: flex;
     justify-content: center;
 }
@@ -370,8 +379,8 @@ a.button-4-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    color:var(--Blue-decoration)
-    text-decoration: none;
+    color: var(--Blue-decoration);
+     text-decoration: none;
 
 
 
@@ -409,32 +418,50 @@ a.button-4-box:hover i {
 
 /* PAGINA PRODOTTI */
 
-.navPaginaProdotti{ 
+.navPaginaProdotti {
     border: solid 2px var(--Secondary-color) !important;
 }
 
-#navbarSupportedContent{ 
+#navbarSupportedContent {
     transition: 0.5s;
 }
 
-.testaIndexProdotti{ 
-    background-color: var(--Primary-color);
-}
 
 .section-prodotti {
     border: solid 2px var(--Secondary-color);
     background-color: var(--Primary-color)var(--Blue-decoration)
 }
 
-.h1-Prodotti{ 
+.h1-Prodotti {
     color: var(--Blue-decoration);
-    border: solid 2px var(--Blue-decoration);
+    font-size: 100px;
+
+
+}
+
+.text-header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 50px;
 }
 
 
-.imgProva { 
- height: 100%;
- width: 100%;
+.imgProva {
+    height: 100%;
+    width: 100%;
+}
+
+.sfondo-rick {
+    background-image: url(Media/sfondo-rick.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* menu dell'accordion */
@@ -489,24 +516,24 @@ a.button-4-box:hover i {
 
 }
 
-#buttonBuy{
-    
+#buttonBuy {
+
     color: var(--Secondary-color);
-background-color: var(--Blue-decoration);
-border-radius: 20px;
-height: 50px;
-margin-bottom: 10px;
-border: solid 2px var(--Primary-color);
+    background-color: var(--Blue-decoration);
+    border-radius: 20px;
+    height: 50px;
+    margin-bottom: 10px;
+    border: solid 2px var(--Primary-color);
 }
 
-#buttonBuy:hover{
-    
+#buttonBuy:hover {
+
     color: var(--Blue-decoration);
     background-color: var(--Secondary-color);
 
 }
 
-.cartCase{ 
+.cartCase {
     background-color: var(--Secondary-color);
     height: 100px;
     width: 100px;
@@ -523,12 +550,12 @@ border: solid 2px var(--Primary-color);
 }
 
 
-.cartCase:hover{ 
-transform: scale(1.5);
- 
+.cartCase:hover {
+    transform: scale(1.5);
+
 }
 
-.cartCustom{ 
+.cartCustom {
     color: var(--Blue-decoration);
 }
 
@@ -553,7 +580,7 @@ transform: scale(1.5);
     appearance: none;
     width: 25px;
     height: 25px;
-    background:  rgb(37, 55, 69);
+    background: rgb(37, 55, 69);
     cursor: pointer;
     border-radius: 50%;
     border: solid 2px var(--Secondary-color);
@@ -579,26 +606,50 @@ transform: scale(1.5);
 
 
 
-/* INIZIO pagina chi siamo */
+/* Inzio pagina chi siamo */
 
-.presentazione{ 
-    color: var(--Secondary-color);
-border: solid 2px var(--Secondary-color);
-font-size: 30px;
+.presentazione {
+    color: var(--Blue-decoration);
+    font-size: 30px;
 }
 
+.headerCustom {
+    background-image: url(Media/newyork\ city.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.mainCustom{ 
+}
+
+.img8mile {
+    background-image: url('Media/newyork\ city.png'), linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    background-blend-mode: multiply;
+
+}
+
+.headerCustom h1 {
+    /* Adjust font size, color, etc. as needed */
+    color: white;
+    /* Example: White text for better visibility */
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    /* Optional: Subtle shadow for readability */
+}
+
+.mainCustom {
     height: max-content;
     border: solid 2px var(--Secondary-color);
 }
 
 .vh-75 {
-     height: 750px;
-    }
+    height: 750px;
+}
 
 
-.circle { 
+.circle {
     height: 300px;
     width: 300px;
     border-radius: 50%;
@@ -606,13 +657,13 @@ font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color:  var(--Secondary-color);
+    color: var(--Secondary-color);
     position: relative;
     margin-top: 100px;
 
 }
 
-.opener{ 
+.opener {
     height: 100px;
     width: 100px;
     border-radius: 50%;
@@ -621,18 +672,18 @@ font-size: 30px;
     align-items: center;
     justify-content: center;
     position: absolute;
-z-index: 3;
-cursor: pointer;
-transition: 0.5;
-background-color: var(--Primary-color);
+    z-index: 3;
+    cursor: pointer;
+    transition: 0.5;
+    background-color: var(--Primary-color);
 }
 
-.moved{ 
+.moved {
     height: 100px;
     width: 100px;
     border-radius: 50%;
     border: solid 2px var(--Secondary-color);
-    background-color:var(--Primary-color);
+    background-color: var(--Primary-color);
     position: absolute;
     transition: 0.5s;
     background-size: 100%;
@@ -643,41 +694,41 @@ background-color: var(--Primary-color);
 }
 
 
-.staffCard{
+.staffCard {
 
     height: 500px;
     width: 300px;
-margin-top: 100px;
-    
+    margin-left: 200px;
+
 
 }
 
 
-.staffCard:hover > .inner{
+.staffCard:hover>.inner {
 
     transform: rotateY(180deg);
 
- 
+
     transform: rotateY(180deg);
 
 }
 
-.inner { 
-    border-radius:20px ;
+.inner {
+    border-radius: 20px;
     height: 100%;
     width: 100%;
     margin-top: 100px;
     position: relative;
     transition: 0.5s;
     transform-style: preserve-3d;
-border: solid 2px var(--Secondary-color);
+    border: solid 2px var(--Secondary-color);
 
 
 
 
 }
 
-.face { 
+.face {
 
     height: 500px;
     width: 300px;
@@ -686,14 +737,14 @@ border: solid 2px var(--Secondary-color);
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
-backface-visibility: hidden;
-border-radius:20px ;
+    backface-visibility: hidden;
+    border-radius: 20px;
 
 
 }
 
 
-.back { 
+.back {
 
     height: 500px;
     width: 300px;
@@ -704,8 +755,14 @@ border-radius:20px ;
     color: var(--Secondary-color);
 
 }
-/* FINE pagina chi siamo */
 
+.navCustom3 {
+    border: solid 2px var(--Secondary-color);
+}
+
+
+
+/* FINE pagina chi siamo */
 
 
 
@@ -714,6 +771,23 @@ border-radius:20px ;
 
 /*inizio media queery per navbar */
 @media screen and (max-width : 900px) {
+
+
+    .carousel-item {
+        width: 100%;
+        height: 500px;
+
+        overflow: hidden;
+        border: solid 1px var(--Secondary-color);
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+
 
     .cheat {
         display: none;
@@ -734,20 +808,29 @@ border-radius:20px ;
         align-items: center;
     }
 
-    .positioned{ 
-  
+    .positioned {
+
         position: relative;
         margin-top: 10000px;
         z-index: 1;
         height: 10px;
-        margin-bottom: 1200px;
+        margin-bottom: 300px;
     }
 
-    .row-card{ 
+    .cardCustom:hover {
+        scale: 1;
+
+
+    }
+
+
+
+
+    .row-card {
         margin-top: 400px;
     }
 
-    .responsiveDiv{ 
+    .responsiveDiv {
         height: 200px;
     }
 
@@ -765,63 +848,223 @@ border-radius:20px ;
         font-size: 40px;
         color: var(--Primary-color);
     }
-    
 
-    .img-section4:hover{
+
+    .img-section4:hover {
 
         scale: 1;
-    
-    
+
+
     }
-    
+
     .h2-section-4:hover {
         scale: 1;
-        
-        }
 
-        .cartCase{ 
-          margin: 15px; 
-          height: 80px;
-          width: 80px;
-        }
-        
+    }
+
+    .cartCase {
+        margin: 15px;
+        height: 80px;
+        width: 80px;
+    }
+
     /* media queery Pagina Prodtti */
 
-#cardAccordionCustomWrapper { 
+    #cardAccordionCustomWrapper {
 
-    overflow-x: scroll;
-    flex-direction: row;
-    
+        overflow-x: scroll;
+        flex-direction: row;
+
+    }
+
+
+
+    .cardAccordionCustom:hover {
+
+        background-color: var(--Blue-decoration);
+        color: var(--Secondary-color);
+        scale: 1;
+        border: solid 2px var(--Secondary-color);
+
+    }
+
+
+
+    /* fine media queery Pagina Prodtti */
+
+
+    .sfondo-rick {
+        background-image: url(Media/sfondo-rick.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .text-header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        margin-left: 45px;
+        font-size: 10px;
+        height: 100px;
+        position: relative;
+        top: 30px;
+    }
+
+
+
+    .h1-Prodotti {
+        color: var(--Blue-decoration);
+        font-size: 40px;
+
+
+    }
+
+    .cartCase {
+
+        position: relative;
+
+
+    }
+
+
+    .menuOrizzontale {
+        display: flex;
+        flex-direction: row !important;
+        overflow-x: scroll !important;
+        flex-wrap: nowrap !important;
+        background-image: url(Media/bg-shop2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: right;
+        width: 2000px;
+        height: 500px;
+        margin-top: 50px !important;
+        border: solid 2px var(--Secondary-color);
+    }
+
+
+
+
+    /* Stile per l'intera scrollbar */
+    ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--Primary-color);
+        border-radius: 10px;
+    }
+
+
+    ::-webkit-scrollbar-track {
+        background: var(--Secondary-color);
+        border-radius: 10px;
+    }
+
+
+    ::-webkit-scrollbar-corner {
+        background: var(--Blue-decoration);
+    }
+
+    .cardAccordionCustom {
+        height: 300px;
+        width: 200px;
+        font-size: 10px;
+        justify-content: space-evenly;
+        align-content: center;
+        margin-top: 100px;
+
+
+    }
+
+
+    .cardAccordionCustom>img {
+        height: 100px;
+        width: 100px;
+        font-size: 10px;
+        border: solid 2px var(--Primary-color)
+    }
+
+    /*Inizio media queery pagina chi siamo */
+
+
+    .mainCustom {
+        height: max-content;
+        border: none;
+    }
+
+
+    .circle {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        border: solid 3px var(--Primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--Secondary-color);
+        position: relative;
+        margin-top: 100px;
+
+    }
+
+    .opener {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: solid 2px var(--Secondary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 3;
+        cursor: pointer;
+        transition: 0.5;
+        background-color: var(--Primary-color);
+    }
+
+    .moved {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: solid 2px var(--Secondary-color);
+        background-color: var(--Primary-color);
+        position: absolute;
+        transition: 0.5s;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+
+    }
+
+    .staffCard {
+
+        height: 500px;
+        width: 300px;
+        margin-left: 0px;
+
+
+
+    }
+
+    .h2AboutUs {
+        margin-top: 250px !important;
+    }
+
+
+    /*Fine media queery pagina chi siamo */
+
+
 }
-
-
-
-.cardAccordionCustom:hover {
-
-    background-color: var(--Blue-decoration);
-    color: var(--Secondary-color);
-    scale: 1;
-    border: solid 2px var(--Secondary-color);
-
-}
-
-/* fine media queery Pagina Prodtti */
-
-.footerCustomChiSiamo{
-
-
-
-    margin-top: 400px;
-
-}
-
-/*Inizio media queery pagina chi siamo */
-
-
-/*Fine media queery pagina chi siamo */
-}
-
-
 
 
 @media screen and (min-width : 900px) {
@@ -839,6 +1082,21 @@ border-radius:20px ;
 
 }
 
+
+@media screen and (max-width : 780px) {
+
+
+    .positioned {
+        position: relative;
+        z-index: 1;
+        height: 10px;
+        margin-bottom: 1000px;
+    }
+
+
+}
+
+
 /* fine media queery per navbar */
 
 
@@ -848,9 +1106,9 @@ border-radius:20px ;
     .navbar-esclusiva .navbar-collapse {
         bottom: 100%;
         top: auto;
-        
+
     }
-  
+
     .navbar-esclusiva .navbar-collapse {
         bottom: 100%;
         top: auto;
@@ -862,71 +1120,95 @@ border-radius:20px ;
         width: 100%;
         bottom: 100%;
         background-color: var(--Secondary-color);
-        left: 0; 
-        margin: 0; 
-        padding: 0; 
-       
+        left: 0;
+        margin: 0;
+        padding: 0;
+
     }
-    
+
 
     .navbar-esclusiva .navbar-nav {
         width: 100%;
-        padding: 0; 
+        padding: 0;
         display: flex;
         flex-direction: column;
 
     }
-    
+
     .navbar-esclusiva .nav-item {
         width: 100%;
-        text-align: center; 
+        text-align: center;
         margin-top: 15px;
     }
 
-} .navbar-esclusiva .nav-link { 
+}
+
+.navbar-esclusiva .nav-link {
     display: block;
-     width: 100%;
-      text-align: start; 
-}
-/* fine media query per nav fixed-bottom pagina prodotti */
-
-
-/* media queery per Header */
-@media screen and (max-width : 900px) {
-
-    .carousel-item {
-        width: 100%;
-        height: 500px;
-
-        overflow: hidden;
-        border: solid 1px var(--Secondary-color);
-    }
-
-    .carousel-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-
-    }
-
+    width: 100%;
+    text-align: start;
 }
 
-/* Fine media queery per Header */
 
 
+@media screen and (max-width: 400px) {
 
-/* media queery per Section1 */
-@media screen and (max-width : 900px) {
 
     .positioned {
-        position: static;
+        position: relative;
+        z-index: 1;
+        height: 10px;
+        margin-bottom: 1000px;
+    }
+
+
+    .circle {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        border: solid 3px var(--Primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--Secondary-color);
+        position: relative;
+        margin-top: 100px;
 
     }
 
+    .opener {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: solid 2px var(--Secondary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 3;
+        cursor: pointer;
+        transition: 0.5;
+        background-color: var(--Primary-color);
+    }
+
+    .moved {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: solid 2px var(--Secondary-color);
+        background-color: var(--Primary-color);
+        position: absolute;
+        transition: 0.5s;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+
+    }
+
+
 }
 
-/* Fine media queery per Section1 */
+
 
 /* fine media queery */
-
-
